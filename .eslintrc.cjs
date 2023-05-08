@@ -15,4 +15,9 @@ module.exports = {
     'vue',
     'prettier'
   ],
+  rules: {
+    'no-console': 0,
+    'prefer-promise-reject-errors': 'off',
+    'prettier/prettier': ['error', { endOfLine: 'auto' }],
+  }
 }
