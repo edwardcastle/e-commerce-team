@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div>algo</div>
 </template>
 
 <script setup></script>
