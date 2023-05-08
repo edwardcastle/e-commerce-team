@@ -1,23 +1,21 @@
 /* eslint-env node */
-require('@rushstack/eslint-patch/modern-module-resolution')
+require('@rushstack/eslint-patch/modern-module-resolution');
 
 module.exports = {
   root: true,
-  'extends': [
+  extends: [
     'plugin:vue/vue3-essential',
     'plugin:prettier/recommended',
-    'prettier',
+    'prettier'
   ],
   parserOptions: {
     ecmaVersion: 'latest'
   },
-  plugins: [
-    'vue',
-    'prettier'
-  ],
+  plugins: ['vue', 'prettier'],
   rules: {
+    'vue/html-self-closing': 'off',
     'no-console': 0,
     'prefer-promise-reject-errors': 'off',
-    'prettier/prettier': ['error', { endOfLine: 'auto' }],
+    'prettier/prettier': ['error', { endOfLine: 'auto' }]
   }
-}
+};
