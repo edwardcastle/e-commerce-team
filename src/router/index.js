@@ -7,6 +7,11 @@ const router = createRouter({
       path: '/category/jewelery',
       name: 'jewelery',
       component: () => import('@/views/JeweleryView.vue')
+    },
+    {
+      path: '/category/jewelery/:id',
+      name: 'productJewelery',
+      component: () => import('@/views/JeweleryProductView.vue')
     }
   ]
 });
