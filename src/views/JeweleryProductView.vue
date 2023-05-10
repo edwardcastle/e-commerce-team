@@ -62,7 +62,37 @@
       </div>
     </div>
   </div>
-  <div></div>
+  <div
+    class="flex flex-wrap justify-center content-center flex-col w-screen h-64"
+  >
+    <span class="text-center font-sans text-4xl font-bold w-screen"
+      >Sujerencia</span
+    >
+  </div>
+  <div class="flex flex-wrap justify-center content-center">
+    <div class="shadow-lg rounded-xl">
+      <img class="w-1/2 h-24 mx-auto" :src="producto.image" />
+      <div class="grid grid-cols-3 gap-1 my-3">
+        <div class="col-span-2 flex flex-col mx-3">
+          <span class="truncate w-44 font-bold" :title="producto.title">
+            {{ producto.title }}</span
+          >
+          <span class="text-slate-400 font-semibold">{{
+            `${producto.price}$`
+          }}</span>
+        </div>
+        <div class="col-span-1 flex flex-wrap justify-center content-center">
+          <button>
+            <img
+              class="w-8 h-8 hover:scale-110 hover:"
+              src="@/assets/icon/carrito.svg"
+              alt=""
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup>
