@@ -69,26 +69,28 @@
       >Sujerencia</span
     >
   </div>
-  <div class="flex flex-wrap justify-center content-center">
-    <div class="shadow-lg rounded-xl">
-      <img class="w-1/2 h-24 mx-auto" :src="producto.image" />
-      <div class="grid grid-cols-3 gap-1 my-3">
-        <div class="col-span-2 flex flex-col mx-3">
-          <span class="truncate w-44 font-bold" :title="producto.title">
-            {{ producto.title }}</span
-          >
-          <span class="text-slate-400 font-semibold">{{
-            `${producto.price}$`
-          }}</span>
-        </div>
-        <div class="col-span-1 flex flex-wrap justify-center content-center">
-          <button>
-            <img
-              class="w-8 h-8 hover:scale-110 hover:"
-              src="@/assets/icon/carrito.svg"
-              alt=""
-            />
-          </button>
+  <div v-if="precioMax">
+    <div class="flex flex-wrap justify-center content-center">
+      <div class="shadow-lg rounded-xl">
+        <img class="w-1/3 h-24 mx-auto" :src="precioMax.image" />
+        <div class="grid grid-cols-3 gap-1 my-3">
+          <div class="col-span-2 flex flex-col mx-3">
+            <span class="truncate w-44 font-bold" :title="precioMax.title">
+              {{ precioMax.title }}</span
+            >
+            <span class="text-slate-400 font-semibold">{{
+              `${precioMax.price}$`
+            }}</span>
+          </div>
+          <div class="col-span-1 flex flex-wrap justify-center content-center">
+            <button>
+              <img
+                class="w-8 h-8 hover:scale-110 hover:"
+                src="@/assets/icon/carrito.svg"
+                alt=""
+              />
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -101,11 +103,16 @@ import { useRoute } from 'vue-router';
 
 const route = useRoute();
 const id = route.params.id;
+const idMaxPrice = route.params.maxPrecio;
 
 const producto = ref(null);
-
+const precioMax = ref(null);
 fetch(`https://fakestoreapi.com/products/${id}`)
   .then(async (res) => (producto.value = await res.json()))
+  .then(async (json) => console.log(await json));
+
+fetch(`https://fakestoreapi.com/products/${idMaxPrice}`)
+  .then(async (res) => (precioMax.value = await res.json()))
   .then(async (json) => console.log(await json));
 </script>
 

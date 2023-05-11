@@ -4,10 +4,17 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 const productos = ref(null);
+const precioMax = ref(null);
 
 fetch('https://fakestoreapi.com/products/category/jewelery')
   .then(async (res) => (productos.value = await res.json()))
-  .then(async (json) => console.log(await json));
+  .then(
+    async (respon) =>
+      (precioMax.value = productos.value.reduce((hightPrice, actualPrice) => {
+        return hightPrice.price > actualPrice.price ? hightPrice : actualPrice;
+      }))
+  )
+  .then(console.log(precioMax));
 </script>
 
 <template>
@@ -38,7 +45,7 @@ fetch('https://fakestoreapi.com/products/category/jewelery')
             @click="
               $router.push({
                 name: 'productJewelery',
-                params: { id: product.id }
+                params: { id: product.id, maxPrecio: precioMax.id }
               })
             "
           />
