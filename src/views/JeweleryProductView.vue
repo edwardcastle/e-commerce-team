@@ -11,10 +11,10 @@
   </header>
   <div v-if="producto">
     <div
-      class="grid grid-flow-col grid-cols-2 grid-rows-1 gap-4 w-8/12 mx-auto"
+      class="grid grid-flow-col grid-cols-2 grid-rows-1 gap-4 w-8/12 h-72 mx-auto"
     >
       <div class="col-span-1 flex flex-wrap justify-center">
-        <img :src="producto.image" class="w-1/2 h-auto rounded-3xl" />
+        <img :src="producto.image" class="h-full w-1/2 rounded-3xl" />
       </div>
       <div class="col-span-1 py-5">
         <span
@@ -66,12 +66,12 @@
     class="flex flex-wrap justify-center content-center flex-col w-screen h-64"
   >
     <span class="text-center font-sans text-4xl font-bold w-screen"
-      >Sujerencia</span
+      >Sugerencia</span
     >
   </div>
   <div v-if="precioMax">
     <div class="flex flex-wrap justify-center content-center">
-      <div class="shadow-lg rounded-xl">
+      <div class="rounded-xl">
         <img class="w-24 h-32 mx-auto" :src="precioMax.image" />
         <div class="grid grid-cols-3 gap-1 my-3">
           <div class="col-span-2 flex flex-col mx-3">

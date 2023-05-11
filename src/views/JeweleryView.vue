@@ -34,11 +34,7 @@ fetch('https://fakestoreapi.com/products/category/jewelery')
       <div
         class="flex flex-wrap justify-center content-center gap-7 my-4 xl:mx-44"
       >
-        <div
-          v-for="product in productos"
-          :key="product.id"
-          class="shadow-lg rounded-xl"
-        >
+        <div v-for="product in productos" :key="product.id" class="rounded-xl">
           <img
             class="w-64 h-64 mx-auto"
             :src="product.image"
