@@ -72,7 +72,7 @@
   <div v-if="precioMax">
     <div class="flex flex-wrap justify-center content-center">
       <div class="shadow-lg rounded-xl">
-        <img class="w-1/3 h-24 mx-auto" :src="precioMax.image" />
+        <img class="w-24 h-32 mx-auto" :src="precioMax.image" />
         <div class="grid grid-cols-3 gap-1 my-3">
           <div class="col-span-2 flex flex-col mx-3">
             <span class="truncate w-44 font-bold" :title="precioMax.title">
