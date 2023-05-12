@@ -54,24 +54,17 @@ fetch(`https://fakestoreapi.com/products/${idM}`).then(
 
   </div>
   <div class="flex flex-wrap content-center justify-center space-x-0 pt-8">
-        <div class="w-1/6 mx-4 justify-center ">
+        <div class="basis-80 mx-15 justify-center items-center ">
           <img
-            class="w-1/2 h-1/2 rounded-lg items-center"
-            :src="bigPr.image"
-            @click="
-              $router.push({
-                name: 'Details',
-                params: { id: bigPr.id}
-              })
-            "
-          />
+            class="w-9/10 h-1/2 rounded-lg items-center"
+            :src="bigPr.image"/>
 
           <div
-            class="grid grid-cols-2 grid-rows-2 text-left text-sm gap-0 text-ellipsis w-1/2"
+            class="grid grid-cols-2 grid-rows-2 text-left text-sm gap-0 w-1/2"
           >
             
               <p class="truncate col-span-1">{{ bigPr.title }}</p>
-              <p class="row-span-3 text-right mx-auto items-center ">
+              <p class="text-right mx-auto items-center ">
               Icono</p>
               <b>{{ bigPr.price }} CUP</b> 
           

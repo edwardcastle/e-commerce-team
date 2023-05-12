@@ -39,11 +39,11 @@ fetch('https://fakestoreapi.com/products/category/electronics')
           />
 
           <div
-            class="grid grid-cols-2 grid-rows-2 text-left text-sm gap-0 text-ellipsis w-1/2"
+            class="grid grid-cols-2 grid-rows-2 text-left text-sm gap-0 w-1/2"
           >
             
               <p class="truncate col-span-1">{{ product.title }}</p>
-              <p class="row-span-3 text-right mx-auto items-center ">
+              <p class="text-right mx-auto items-center ">
               Icono</p>
               <b>{{ product.price }} CUP</b> 
           
