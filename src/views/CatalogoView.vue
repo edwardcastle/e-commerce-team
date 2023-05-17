@@ -22,6 +22,7 @@
             class="w-36 h-36 rounded-xl"
             src="@/assets/icon/div.overlay.jpg"
             alt=""
+            @click="$router.push({ name: '' })"
           />
           <span class="flex flex-grow justify-center content-center pt-2"
             >Electronica</span
@@ -32,6 +33,7 @@
             class="w-36 h-36 rounded-xl"
             src="@/assets/icon/div.overlay (1).jpg"
             alt=""
+            @click="$router.push({ name: '' })"
           />
           <span class="flex flex-grow justify-center content-center pt-2"
             >Ropa de Hombre</span
@@ -42,6 +44,7 @@
             class="w-36 h-36 rounded-xl"
             src="@/assets/icon/div.overlay (2).jpg"
             alt=""
+            @click="$router.push({ name: 'jewelery' })"
           />
           <span class="flex flex-grow justify-center content-center pt-2"
             >Joyeria</span
@@ -52,6 +55,7 @@
             class="w-36 h-36 rounded-xl"
             src="@/assets/icon/div.overlay (3).jpg"
             alt=""
+            @click="$router.push({ name: '' })"
           />
           <span class="flex flex-grow justify-center content-center pt-2"
             >Ropa de Mujer</span
