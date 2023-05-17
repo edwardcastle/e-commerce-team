@@ -16,7 +16,7 @@ const router = createRouter({
     {
       path: '/catalogo',
       name: 'catalogo',
-      component: () => import('@views/CatalogoView.vue')
+      component: () => import('@/views/CatalogoView.vue')
     }
   ]
 });
