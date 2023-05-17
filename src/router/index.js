@@ -12,6 +12,11 @@ const router = createRouter({
       path: '/category/jewelery/:id/:maxPrecio',
       name: 'productJewelery',
       component: () => import('@/views/JeweleryProductView.vue')
+    },
+    {
+      path: '/catalogo',
+      name: 'catalogo',
+      component: () => import('@views/CatalogoView.vue')
     }
   ]
 });
