@@ -1,7 +1,9 @@
 <template>
   <header class="bg-slate-100 border-2">
-    <div class="flex flex-wrap h-96 my-4 xl:mx-52">
-      <div class="w-2/3 grid grid-cols-1 content-center">
+    <div class="flex flex-wrap h-96 my-4 xl:mx-52 lg:mx-36 md:mx-20">
+      <div
+        class="xl:w-2/3 lg:w-2/3 md:w-1/2 sm:w-1/2 grid grid-cols-1 content-center"
+      >
         <span class="font-sans text-4xl font-bold"
           >Categorías <br />
           destacadas</span
@@ -12,7 +14,9 @@
           nuestras categorías</span
         >
       </div>
-      <div class="w-1/3 grid grid-cols-2 col-span-1 gap-11">
+      <div
+        class="xl:w-1/3 lg:w-1/3 md:w-1/2 sm:w-1/2 grid grid-cols-2 col-span-1 sm:gap-7 md:gap-9 lg:gap-10 xl:gap-11"
+      >
         <div class="col-span-1 w-40 h-40">
           <img
             class="w-36 h-36 rounded-xl"
@@ -30,7 +34,7 @@
             alt=""
           />
           <span class="flex flex-grow justify-center content-center pt-2"
-            >Jewelery</span
+            >Ropa de Hombre</span
           >
         </div>
         <div class="col-span-1 w-40 h-40">
@@ -40,7 +44,7 @@
             alt=""
           />
           <span class="flex flex-grow justify-center content-center pt-2"
-            >Jewelery</span
+            >Joyeria</span
           >
         </div>
         <div class="col-span-1 w-40 h-40">
@@ -50,7 +54,7 @@
             alt=""
           />
           <span class="flex flex-grow justify-center content-center pt-2"
-            >Jewelery</span
+            >Ropa de Mujer</span
           >
         </div>
       </div>
