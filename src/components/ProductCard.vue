@@ -27,15 +27,15 @@
 const product = defineProps({
   imageUrl: {
     type: String,
-    require: true
+    required: true
   },
   title: {
     type: String,
-    require: true
+    required: true
   },
   price: {
     type: Number,
-    require: true
+    required: true
   }
 });
 </script>
